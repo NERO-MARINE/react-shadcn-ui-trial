@@ -34,7 +34,7 @@ const Login = () => {
   const onSubmit = (values: z.infer<typeof FormSchema>) => {
     setUsername(values.email);
     setSuccess(true);
-    setAlertOpen(true); // Open alert on successful login
+    setAlertOpen(true);
     console.log("Login successful", values);
   };
 
@@ -87,7 +87,6 @@ const Login = () => {
         </form>
       </Form>
 
-      {/* Automatically show the alert box when login is successful */}
       {success && (
         <MyAlerts
           open={alertOpen}
